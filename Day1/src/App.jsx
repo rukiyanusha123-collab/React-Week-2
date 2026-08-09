@@ -10,6 +10,9 @@ function reducer(state,action){
      count:state.count+1
    }
    case "decrement":
+    if (state.count<=0){
+      return state;
+    }
     return{
       count:state.count-1
     }
@@ -36,4 +39,4 @@ function App(){
     </>
   )
 }
-export default App;
+export default App;   
