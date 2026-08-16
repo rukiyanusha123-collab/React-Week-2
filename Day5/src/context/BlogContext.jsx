@@ -8,12 +8,11 @@ function BlogProvider({ children }) {
     return storedBlogs ? JSON.parse(storedBlogs) : [];
   });
 
-  // Save blogs to localStorage
   useEffect(() => {
     localStorage.setItem("blogs", JSON.stringify(blogs));
   }, [blogs]);
 
-  // CREATE
+  
   const addBlog = (blog) => {
     const newBlog = {
       id: Date.now(),
@@ -24,14 +23,12 @@ function BlogProvider({ children }) {
     setBlogs((prevBlogs) => [...prevBlogs, newBlog]);
   };
 
-  // DELETE
   const deleteBlog = (id) => {
     setBlogs((prevBlogs) =>
       prevBlogs.filter((blog) => blog.id !== id)
     );
   };
 
-  // UPDATE
   const updateBlog = (id, updatedBlog) => {
     setBlogs((prevBlogs) =>
       prevBlogs.map((blog) =>
