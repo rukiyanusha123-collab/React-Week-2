@@ -26,14 +26,14 @@ function BlogDetails() {
     );
   }
 
-  const handleUpdate = async () => {
-    await updateBlog(id, {
-      title,
-      body,
-    });
+const handleUpdate = async () => {
+  await updateBlog(Number(id), {
+    title,
+    body,
+  });
 
-    setEdit(false);
-  };
+  setEdit(false);
+};
 
   return (
     <div className="page-container">
