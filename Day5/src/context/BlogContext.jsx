@@ -15,7 +15,7 @@ function BlogProvider({ children }) {
   
   const addBlog = (blog) => {
     const newBlog = {
-      id: Date.now(),
+      id: Date.now(), 
       title: blog.title,
       body: blog.body,
     };
