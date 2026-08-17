@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 function BlogDetails() {
   const { id } = useParams();
 
-  const { blogs, updateBlog } = useContext(BlogContext);
+    const { blogs, updateBlog } = useContext(BlogContext);
 
   const blog = blogs.find(
     (blog) => String(blog.id) === String(id)
