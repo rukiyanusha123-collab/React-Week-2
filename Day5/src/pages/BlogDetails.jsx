@@ -11,10 +11,10 @@ function BlogDetails() {
     (blog) => String(blog.id) === String(id)
   );
 
-  const [title, setTitle] = useState(blog?.title || "");
-  const [body, setBody] = useState(blog?.body || "");
+    const [title, setTitle] = useState(blog?.title || "");
+    const [body, setBody] = useState(blog?.body || "");
 
-  const [edit, setEdit] = useState(false);
+    const [edit, setEdit] = useState(false);
 
   const navigate = useNavigate();
 
